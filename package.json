@@ -85,7 +85,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "unplugin": "^1.0.1"
+    "unplugin": "^1.0.1",
+    "unplugin-px-to-rem": "workspace:^0.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.33.1",

@@ -7,6 +7,7 @@ export default defineConfig({
     Inspect(),
     Unplugin({
       exclude: ['node_modules'],
+      endWith: ['.css'],
       dirs: ['/css'],
     }),
   ],

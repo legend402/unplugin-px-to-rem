@@ -13,7 +13,6 @@ export default createUnplugin<Options | undefined>(options => ({
     const endWith = options?.endWith || []
     const dirs = options?.dirs || []
     const exclude = options?.exclude || []
-    const currentFileType = id.split('.').at(-1)
 
     if (dirs.length !== 0 && !dirs.some(dir => id.includes(join(cwd, dir))))
       return false
@@ -21,7 +20,7 @@ export default createUnplugin<Options | undefined>(options => ({
     if (exclude.length !== 0 && exclude.some(dir => id.includes(join(cwd, dir))))
       return false
 
-    return endWith.length === 0 ? true : endWith.includes(`.${currentFileType}`)
+    return endWith.length === 0 ? true : endWith.some(item => id.includes(item))
   },
   transform(code) {
     return code.replaceAll(regPx, (item) => {

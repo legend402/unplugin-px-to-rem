@@ -1,28 +1,22 @@
-# unplugin-starter
+# [unplugin-px-to-rem](https://github.com/legend402/unplugin-px-to-rem)
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
+transform px to rem, you can specify the directory you want to convert to
 
-## Template Usage
+## Usage
 
-To use this template, clone it down using:
-
-```bash
-npx degit antfu/unplugin-starter my-unplugin
-```
-
-And do a global replace of `unplugin-starter` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+| options  | desc                           | type     | default |
+| -------- | ------------------------------ | -------- | ------- |
+| endWith  | files type                     | string[] | []      |
+| exclude  | directory that is not included | string[] | []      |
+| dirs     | directory that is included    | string[] | []      |
+| fontBase | conversion ratio               | number   | 16      |
 
 ## Install
 
 ```bash
-npm i unplugin-starter
+npm i unplugin-px-to-rem -D
 ```
 
 <details>
@@ -30,35 +24,34 @@ npm i unplugin-starter
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-starter/vite'
+import UnpluginPxToRem from 'unplugin-px-to-rem/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    UnpluginPxToRem ({ /* options */ }),
   ],
 })
 ```
 
 Example: [`playground/`](./playground/)
 
-<br></details>
+`<br></details>`
 
 <details>
 <summary>Rollup</summary><br>
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-starter/rollup'
+import UnpluginPxToRem  'unplugin-px-to-rem/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    UnpluginPxToRem ({ /* options */ }),
   ],
 }
 ```
 
-<br></details>
-
+`<br></details>`
 
 <details>
 <summary>Webpack</summary><br>
@@ -68,12 +61,12 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-starter/webpack')({ /* options */ })
+    require('unplugin-px-to-rem/webpack')({ /* options */ })
   ]
 }
 ```
 
-<br></details>
+`<br></details>`
 
 <details>
 <summary>Nuxt</summary><br>
@@ -82,14 +75,14 @@ module.exports = {
 // nuxt.config.js
 export default {
   buildModules: [
-    ['unplugin-starter/nuxt', { /* options */ }],
+    ['unplugin-px-to-rem/nuxt', { /* options */ }],
   ],
 }
 ```
 
 > This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
 
-<br></details>
+`<br></details>`
 
 <details>
 <summary>Vue CLI</summary><br>
@@ -99,13 +92,13 @@ export default {
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-starter/webpack')({ /* options */ }),
+      require('unplugin-px-to-rem/webpack')({ /* options */ }),
     ],
   },
 }
 ```
 
-<br></details>
+`<br></details>`
 
 <details>
 <summary>esbuild</summary><br>
@@ -113,11 +106,11 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-starter/esbuild'
+import UnpluginPxToRem from 'unplugin-px-to-rem/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [UnpluginPxToRem ()],
 })
 ```
 
-<br></details>
+`<br></details>`

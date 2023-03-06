@@ -79,6 +79,7 @@
     "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
     "play": "npm -C playground run dev",
+    "play2": "npm -C playground2 run serve",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
@@ -86,7 +87,7 @@
   },
   "dependencies": {
     "unplugin": "^1.0.1",
-    "unplugin-px-to-rem": "workspace:^0.1.0"
+    "unplugin-px-to-rem": "workspace:^0.1.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.33.1",

@@ -6,6 +6,7 @@ const regPx = /-([1-9]\d*.\d*|0.\d*[1-9]\d)px|([1-9]\d*.\d*|0.\d*[1-9]\d)px|\dpx
 
 export default createUnplugin<Options | undefined>(options => ({
   name: 'unplugin-px-to-rem',
+  enforce: 'pre',
   transformInclude(id) {
     id = join(id, '')
     const cwd = process.cwd()

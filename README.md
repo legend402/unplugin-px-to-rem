@@ -1,6 +1,6 @@
 # [unplugin-px-to-rem](https://github.com/legend402/unplugin-px-to-rem)
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
+[![NPM version](https://www.npmjs.com/package/unplugin-px-to-rem?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-px-to-rem)
 
 transform px to rem, you can specify the directory you want to convert to
 
@@ -35,7 +35,7 @@ export default defineConfig({
 
 Example: [`playground/`](./playground/)
 
-`<br></details>`
+<br></details>
 
 <details>
 <summary>Rollup</summary><br>
@@ -51,7 +51,7 @@ export default {
 }
 ```
 
-`<br></details>`
+<br></details>
 
 <details>
 <summary>Webpack</summary><br>
@@ -66,7 +66,7 @@ module.exports = {
 }
 ```
 
-`<br></details>`
+<br></details>
 
 <details>
 <summary>Nuxt</summary><br>
@@ -82,7 +82,7 @@ export default {
 
 > This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
 
-`<br></details>`
+<br></details>
 
 <details>
 <summary>Vue CLI</summary><br>
@@ -98,7 +98,9 @@ module.exports = {
 }
 ```
 
-`<br></details>`
+Example: [`playground2/`](./playground2/)
+
+<br></details>
 
 <details>
 <summary>esbuild</summary><br>
@@ -113,4 +115,4 @@ build({
 })
 ```
 
-`<br></details>`
+<br></details>
